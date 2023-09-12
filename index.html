@@ -40,6 +40,10 @@
 
 
   <!-- aria-describedby="p1" -->
+  <!-- 
+    longdesc="otherpage.html" 
+    longdesc="index.html#desc"
+  -->
   <img src="art.png" />
   <p id="p1">This painting dates back to 1730 and is oil on canvas. It was created by 
     Jean-Guy Millome, and represents ...</p>
@@ -59,9 +63,25 @@
     </math>
   </div>
 
-  
+  <h3>Doughnut Selection</h3>
 
-  
-  
+  <!-- 
+    for="dn-choc"
+    for="dn-cream"
+    for="dn-raspberry"
+  -->
+  <form action="/buy-doughnuts" method="post">
+    <fieldset>
+      <legend>Pick the doughnut you would like</legend>
+      <input id="dn-choc" name="flavor" type="radio" value="chocolate">
+      <label >Chocolate</label>
+      <input id="dn-cream" name="flavor" type="radio" value="cream">
+      <label >Cream Filled</label>
+      <input id="dn-raspberry" name="flavor" type="radio" value="raspberry">
+      <label >Raspberry Filled</label>
+    </fieldset>
+    <input type="submit" value="Purchase Your Doughnut">
+  </form>
+
 </body>
 </html>
