@@ -11,14 +11,12 @@
   <h2>Subtitle</h2>
 
   <div>
-    <!-- aria-labelledby="star_id" -->
-    <div role="img">
-      <!-- alt="4 out of 5 stars"-->
-      <img src="star.png" />
-      <img src="star.png" />
-      <img src="star.png" />
-      <img src="star.png" />
-      <img src="unstar.png" />
+    <div role="img" aria-labelledby="star_id">
+      <img src="star.png" alt="4 out of 5 stars" />
+      <img src="star.png" alt=""/>
+      <img src="star.png" alt=""/>
+      <img src="star.png" alt=""/>
+      <img src="unstar.png" alt=""/>
       </div>
       
       <div id="star_id">4 out of 5 stars</div>
@@ -26,33 +24,22 @@
 
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sit asperiores ratione dolore. Laudantium aut, mollitia voluptatibus, quo perspiciatis natus similique animi delectus laboriosam nisi earum quibusdam nobis, quaerat molestiae non doloribus et architecto corrupti officia nam facilis! Facere debitis impedit porro nihil, quisquam sequi placeat distinctio deleniti voluptatum. Facere laboriosam saepe accusantium vero exercitationem laudantium velit alias veritatis similique! Beatae iusto eum sequi assumenda expedita, hic maxime, maiores eius ea numquam nam. Dolores dolore officia laborum ab odit, similique est sunt ea dolorum architecto provident sint cupiditate praesentium quae reprehenderit rem corrupti voluptatem harum aperiam. Temporibus numquam vel nulla?</p>
 
-
-  <!--
-    aria-label="you"
-    aria-label="rock"
-  -->
   <p>I smiled at my friend and said 
-    <span role="img">👉🏾</span>
-    <span role="img">🤘🏾</span>!
+    <span aria-label="you" role="img">👉🏾</span>
+    <span aria-label="rock" role="img">🤘🏾</span>!
  </p>
 
   <h1>The second header</h1>
 
-
-  <!-- aria-describedby="p1" -->
-  <!-- 
-    longdesc="otherpage.html" 
-    longdesc="index.html#desc"
-  -->
-  <img src="art.png" />
+  <!-- In case of long description on the same page: longdesc="index.html#desc" -->
+  <img src="art.png" aria-describedby="p1" longdesc="otherpage.html" />
   <p id="p1">This painting dates back to 1730 and is oil on canvas. It was created by 
     Jean-Guy Millome, and represents ...</p>
 
 
   <h3>Equation</h3>
 
-  <!-- aria-label="6 divided by 4 equals 1.5" -->
-  <div role="math" >
+  <div role="math" aria-label="6 divided by 4 equals 1.5">
     <math xmlns="https://www.w3.org/1998/Math/MathML">
       <mfrac>
         <mn>6</mn>
@@ -65,20 +52,15 @@
 
   <h3>Doughnut Selection</h3>
 
-  <!-- 
-    for="dn-choc"
-    for="dn-cream"
-    for="dn-raspberry"
-  -->
   <form action="/buy-doughnuts" method="post">
     <fieldset>
       <legend>Pick the doughnut you would like</legend>
       <input id="dn-choc" name="flavor" type="radio" value="chocolate">
-      <label >Chocolate</label>
+      <label for="dn-choc">Chocolate</label>
       <input id="dn-cream" name="flavor" type="radio" value="cream">
-      <label >Cream Filled</label>
+      <label for="dn-cream">Cream Filled</label>
       <input id="dn-raspberry" name="flavor" type="radio" value="raspberry">
-      <label >Raspberry Filled</label>
+      <label for="dn-raspberry">Raspberry Filled</label>
     </fieldset>
     <input type="submit" value="Purchase Your Doughnut">
   </form>
